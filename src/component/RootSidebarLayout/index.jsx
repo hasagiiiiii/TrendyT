@@ -32,6 +32,7 @@ const RootSiderbarLayout = () => {
           <LinkStyled>Thêm sản phẩm</LinkStyled>
           <LinkStyled>Sản phẩm vi phạm</LinkStyled>
           <LinkStyled>Cài đặt sản phẩm</LinkStyled>
+          <LinkStyled>test thử</LinkStyled>
         </PanelStyled>
       </Collapse>
     </div>

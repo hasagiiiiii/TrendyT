@@ -8,7 +8,7 @@ const RootLayout = () => {
     <div>
       <RootHeader />
       <Row style={{ paddingTop: "70px" }}>
-        <Col span={3}>
+        <Col span={4}>
           <RootSiderbarLayout />
         </Col>
         <Col span={18}>

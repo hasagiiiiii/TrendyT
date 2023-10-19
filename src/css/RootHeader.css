@@ -146,7 +146,7 @@
   /* justify-content: space-around; */
 }
 .header-action .trendyTTT-popover {
-  padding: 15px 15px 15px 15px;
+  padding: 10px 0px;
   width: 30%;
 }
 .header-action .trendyTTT-popover:hover .dropdown-menu {
@@ -172,8 +172,8 @@
   position: absolute;
   display: grid;
   transform: scale(0);
-  left: -150px;
-  top: 80px;
+  left: -140px;
+  top: 75px;
   width: 350px;
   background-color: white;
   grid-template-columns: 100px 100px 100px;
@@ -188,7 +188,7 @@
   width: 0;
   height: 0;
   top: -10px;
-  left: 180px;
+  left: 157px;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid #fff;

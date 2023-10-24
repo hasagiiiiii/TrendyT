@@ -3,7 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./Layout/RootLayout";
 import AllProduct from "./component/ProductManagementLayout/AllProduct";
 import "./App.css";
-import ListAll from "./component/ProductManagementLayout/ProductListLayout/ListAll";
+
+import LayoutLogin from "./Layout/LayoutLogin";
+
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -21,6 +23,10 @@ const App = () => {
           ]
         }
       ]
+    },
+    {
+      path: "/Login",
+      element: <LayoutLogin />,
     },
   ]);
   return <RouterProvider router={router} />;

@@ -1,7 +1,5 @@
 import React from 'react'
-import RootSiderbarLayout from '../RootSidebarLayout'
-import {Link,Routes,Route, Outlet} from 'react-router-dom'
-import ListAll from './ProductListLayout/ListAll';
+import {Link, Outlet} from 'react-router-dom'
 import "../../css/RootProduct.css";
 
 

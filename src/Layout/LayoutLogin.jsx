@@ -51,7 +51,6 @@ const LayoutLogin = () => {
     }));
   };
   const onSubmit = async () => {
-    console.log("hello");
     try {
       await fetch(
         "http://csmtung2003-001-site1.atempurl.com/api/LoginUser/v1/LoginUser",

@@ -7,11 +7,11 @@ const RootLayout = () => {
   return (
     <div>
       <RootHeader />
-      <Row style={{ paddingTop: "70px" }}>
-        <Col span={4}>
+      <Row style={{ paddingTop: "70px"}}>
+        <Col span={4} style={{ background: '#fff'}}>
           <RootSiderbarLayout />
         </Col>
-        <Col span={18}>
+        <Col span={20}>
           <Outlet />
         </Col>
       </Row>

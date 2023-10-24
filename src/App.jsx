@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./Layout/RootLayout";
 import AllProduct from "./component/ProductManagementLayout/AllProduct";
 import "./App.css";
-
+import ListAll from "./component/ProductManagementLayout/ProductListLayout/ListAll";
 import LayoutLogin from "./Layout/LayoutLogin";
 
 const App = () => {
@@ -14,15 +14,15 @@ const App = () => {
       children: [
         {
           path: "/AllProduct",
-          element: <AllProduct/>,
+          element: <AllProduct />,
           children: [
             {
-              path: '/AllProduct/list/all',
-              element:<ListAll/>
-            }
-          ]
-        }
-      ]
+              path: "/AllProduct/list/all",
+              element: <ListAll />,
+            },
+          ],
+        },
+      ],
     },
     {
       path: "/Login",

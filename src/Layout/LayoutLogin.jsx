@@ -50,8 +50,8 @@ const LayoutLogin = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  const onSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async () => {
+    console.log("hello");
     try {
       await fetch(
         "http://csmtung2003-001-site1.atempurl.com/api/LoginUser/v1/LoginUser",
@@ -105,7 +105,7 @@ const LayoutLogin = () => {
               Nền tảng thương mại điện tử
             </h1>
           </div>
-          <FormStyled>
+          <FormStyled onFinish={onSubmit}>
             <h1>Đăng nhập</h1>
             <InputStyled
               placeholder="Enter your username or Email"
@@ -124,9 +124,7 @@ const LayoutLogin = () => {
               onChange={(e) => handleChangeFormValue(e)}
             />
 
-            <ButtonStyled onClick={onSubmit} type="submit">
-              Đăng nhập
-            </ButtonStyled>
+            <ButtonStyled htmlType="submit">Đăng nhập</ButtonStyled>
           </FormStyled>
         </div>
       </ContainerContent>

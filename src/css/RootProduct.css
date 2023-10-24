@@ -1,0 +1,119 @@
+.product-filter-cart,
+.product-list-main
+{
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.12);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.12)
+}
+.product-tabs-nav{
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.filter-form{
+    padding: 20px;
+}
+
+.filter-form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.product-form-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 25px;
+    margin-bottom: 16px;
+    gap: 10px;
+}
+.product-form-item input{
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.product-form-item label{
+    display: block;
+    width: 80px;
+    font-size: 13px;
+}
+.submit-form-box button,
+.action-box button{
+    padding: 5px 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #999999;
+}
+.submit-form-box button:first-child{
+    background-color: #E84F20;
+    color: #fff;
+    font-size: 13px;
+    border: 1px solid #E84F20;
+}
+.product-tabs-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 56px;
+    padding: 0 24px;
+}
+.product-tabs-nav ul li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+.product-tabs-nav ul li a{
+    color: #000;
+    font-size: 13px;
+}
+.list-panel{
+    width: 100%;
+}
+.list-panel .list-all{
+    padding: 20px;
+}
+.prodcut-list-header{
+    margin-bottom: 10px;
+    height: 50px;
+}
+.product-list-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.title-box{
+    width: 40%;
+}
+.percent-des {
+    font-size: 9px;
+}
+.product-list-table{
+    width: 100%;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    background-color: #F6F6F6;
+}
+.product-list-table table{
+    width: 100%;
+}
+.product-list-table table thead{
+    height: 70px;
+}
+.product-list-table table tbody tr td{
+    padding: 10px;
+}
+.product-list-table table thead tr th{
+    color: #696969;
+    font-size: 12px;
+}

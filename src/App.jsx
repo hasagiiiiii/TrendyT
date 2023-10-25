@@ -9,7 +9,7 @@ import LayoutLogin from "./Layout/LayoutLogin";
 
 const App = () => {
   return (
-    <BrowserRouter basename="TrendyT">
+    <BrowserRouter basename="/TrendyT">
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route path="/All" element={<AllProduct />} />

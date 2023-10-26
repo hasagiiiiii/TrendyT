@@ -10,7 +10,6 @@ export default function AllProduct() {
           <div className="filter-form-box">
             <div className="filter-col-left">
               <div className="product-form-item">
-                {/* <RootSiderbarLayout/> */}
                 <input placeholder="...." />
               </div>
               <div className="product-form-item">

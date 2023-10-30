@@ -1,29 +1,32 @@
 import { Collapse, Typography } from "antd";
 import React from "react";
 import styled from "styled-components";
+<<<<<<< HEAD
 
+=======
+const PanelStyled = styled(Collapse.Panel)`
+  &&& {
+    .ant-collapse-item {
+      margin-right: 10px;
+    }
+    .ant-collapse-header {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+`;
+const LinkStyled = styled(Typography.Link)`
+  &&& {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    &:hover {
+      color: red;
+    }
+  }
+`;
+>>>>>>> 56e38ad8eef4da122f3a30863d9d13562792b169
 const RootSiderbarLayout = () => {
-  const PanelStyled = styled(Collapse.Panel)`
-    &&& {
-      .ant-collapse-item {
-        margin-right: 10px;
-      }
-      .ant-collapse-header {
-        display: flex;
-        flex-direction: row-reverse;
-      }
-    }
-  `;
-  const LinkStyled = styled(Typography.Link)`
-    &&& {
-      display: block;
-      padding: 5px 10px;
-      color: black;
-      &:hover {
-        color: red;
-      }
-    }
-  `;
   return (
     <div>
       <Collapse size="small" ghost defaultActiveKey={["1"]}>

@@ -7,8 +7,8 @@ const RootLayout = () => {
   return (
     <div>
       <RootHeader />
-      <Row style={{ paddingTop: "70px"}}>
-        <Col span={4} style={{ background: '#fff'}}>
+      <Row style={{ paddingTop: "70px" }}>
+        <Col span={4} style={{ background: "#fff" }}>
           <RootSiderbarLayout />
         </Col>
         <Col span={20}>

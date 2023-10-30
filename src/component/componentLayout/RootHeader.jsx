@@ -12,18 +12,36 @@ import { BsWallet2, BsCashCoin } from "react-icons/bs";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { IoIosLogOut } from "react-icons/io";
 import { SiHomeassistant } from "react-icons/si";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../../css/RootHeader.css";
 const RootHeader = () => {
   const [isHover, setIsHover] = useState(false);
+  const location = useLocation();
+  // console.log(window.location.pathname)
+  const urlLocation = location.pathname.split("/");
+  console.log(urlLocation);
   return (
     <div className="header-content">
       <div className="header-logo">
         {/* img */}
-        <h2>TrendyTTT</h2>
+        <h2>
+          <Link to="/">TrendyT</Link>
+        </h2>
       </div>
       <div className="content-box">
-        <h2>Kênh Người Bán</h2>
+        {urlLocation.length > 2 ? (
+          urlLocation.map((item) => {
+            return (
+              <h2 key={item}>
+                <Link to="/">{item}</Link>
+              </h2>
+            );
+          })
+        ) : (
+          <h2>
+            <Link to="/">Kênh Người Bán</Link>
+          </h2>
+        )}
       </div>
       <div
         className={`trendyTTT-popover ${isHover ? "hovered" : ""}`}

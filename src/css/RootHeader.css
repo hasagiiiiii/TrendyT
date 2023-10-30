@@ -12,11 +12,13 @@
 .header-content .header-logo {
   margin-left: 16px;
   width: 5%;
-  color: #e84f20;
   fill: #ee4d2d;
 }
 .header-content .header-logo h2 {
   font-size: 25px;
+}
+.header-content .header-logo h2 a {
+  color: #e84f20;
 }
 .header-content .content-box {
   width: 60%;
@@ -90,7 +92,7 @@
   padding-left: 8px;
 }
 .menu-drop-down-popover {
-  display: block;
+  display: none;
   position: absolute;
   background-color: #fff;
   top: 70px;
@@ -170,7 +172,7 @@
 }
 .dropdown-menu {
   position: absolute;
-  display: grid;
+  display: none;
   transform: scale(0);
   left: -140px;
   top: 75px;

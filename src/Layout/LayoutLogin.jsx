@@ -4,7 +4,7 @@ import { Button, Form, Input } from "antd";
 import styled from "styled-components";
 import Logo from "../assest/logo2.png";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 const ContainerContent = styled.div`
   background: aqua;
   height: 80vh;
@@ -51,7 +51,7 @@ const LayoutLogin = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const onSubmit = async () => {
     try {
       await fetch(

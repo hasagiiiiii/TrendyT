@@ -40,7 +40,7 @@ const RootSiderbarLayout = () => {
           <LinkStyled href="/TrendyT/AllProduct" onClick={getValueLink}>
             Tất cả sản phẩm
           </LinkStyled>
-          <LinkStyled href="/TrendyT/Hello" onClick={getValueLink}>
+          <LinkStyled href="/TrendyT/AddProduct" onClick={getValueLink}>
             Thêm sản phẩm
           </LinkStyled>
           <LinkStyled>Sản phẩm vi phạm</LinkStyled>

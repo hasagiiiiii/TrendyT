@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import "../../css/RootProduct.css";
 
 export default function AllProduct() {
+  const navigate = useNavigate();
   return (
     <div className="product-content">
       <div className="product-filter-cart">
@@ -40,7 +41,13 @@ export default function AllProduct() {
         <div className="product-tabs-nav">
           <ul>
             <li>
-              <Link to="/AllProduct/list/all">Tất cả</Link>
+              <Link
+                to="/AllProduct/List"
+                onClick={() => navigate("/AllProduct/List")}
+              >
+                Tất cả
+              </Link>
+              {/* <div onClick={() => navigate("/AllProduct/List")}>Tất cả</div> */}
             </li>
             <li>
               <Link to="/list/active">Đang hoạt động</Link>

@@ -4,6 +4,14 @@ import RootHeader from "../component/componentLayout/RootHeader";
 import { Row, Col } from "antd";
 import RootSiderbarLayout from "../component/RootSidebarLayout";
 const RootLayout = () => {
+  const value = async () => {
+    await fetch(
+      "http://csmtung2003-001-site1.atempurl.com/api/LoginUser/v1/GetTestCookie"
+    )
+      .then((res) => res)
+      .then((data) => console.log(data));
+  };
+  value();
   return (
     <div>
       <RootHeader />

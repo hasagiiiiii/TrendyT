@@ -4,6 +4,7 @@ import { Button, Form, Input } from "antd";
 import styled from "styled-components";
 import Logo from "../assest/logo2.png";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+// import { useNavigate } from "react-router-dom";
 const ContainerContent = styled.div`
   background: aqua;
   height: 80vh;
@@ -50,6 +51,7 @@ const LayoutLogin = () => {
       [e.target.name]: e.target.value,
     }));
   };
+  // const navigate = useNavigate();
   const onSubmit = async () => {
     try {
       await fetch(
@@ -62,31 +64,23 @@ const LayoutLogin = () => {
           body: JSON.stringify(formValue),
           credentials: "include",
         }
-      ).then((response) => {
-        if (response.headers.has("Set-Cookie")) {
-          // Lấy giá trị của header Set-Cookie
-          const cookieHeader = response.headers.has("Set-Cookie");
-
-          // Chia nhỏ các phần của cookie nếu có nhiều cookie
-          const cookieParts = cookieHeader.split(";");
-
-          // Lưu từng phần vào cookie storage
-
-          cookieParts.forEach((part) => {
-            // Tách tên và giá trị của cookie
-            console.log(part);
-            const [name, value] = part.trim().split("=");
-            console.log(cookieParts);
-            // Lưu cookie vào cookie storage
-            document.cookie = `${name}=${value};path="/Hello`;
-          });
-
-          // Hiển thị thông báo hoặc thực hiện các bước tiếp theo sau khi lưu cookie
-          console.log("Cookie đã được lưu thành công!");
-        } else {
-          console.log("Không có cookie được gửi từ backend.");
-        }
-      });
+      )
+        .then((res) => {
+          if (res.ok) {
+            fetch(
+              "http://csmtung2003-001-site1.atempurl.com/api/LoginUser/v1/GetTestCookie",
+              {
+                method: "GET",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            )
+              .then((res) => res)
+              .then((data) => console.log(data));
+          }
+        })
+        .then((data) => data);
     } catch (error) {
       console.log(error);
     }

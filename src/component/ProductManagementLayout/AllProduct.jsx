@@ -40,22 +40,22 @@ export default function AllProduct() {
         <div className="product-tabs-nav">
           <ul>
             <li>
-              <Link to="/AllProduct/list/all">Tất cả</Link>
+              <Link to="/AllProduct/list">Tất cả</Link>
             </li>
             <li>
-              <Link to="/list/active">Đang hoạt động</Link>
+              <Link to="/AllProduct/active">Đang hoạt động</Link>
             </li>
             <li>
-              <Link to="/list/soldout">Hết hàng</Link>
+              <Link to="/AllProduct/soldout">Hết hàng</Link>
             </li>
             <li>
-              <Link to="/list/reviewing">Chờ duyệt</Link>
+              <Link to="/AllProduct/reviewing">Chờ duyệt</Link>
             </li>
             <li>
               <Link to="/banned/action">Vi phạm</Link>
             </li>
             <li>
-              <Link to="/list/unlisted">Đã ẩn</Link>
+              <Link to="/AllProduct/unlisted">Đã ẩn</Link>
             </li>
           </ul>
         </div>

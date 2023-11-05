@@ -1,9 +1,7 @@
 import { Collapse, Typography } from "antd";
 import React from "react";
 import styled from "styled-components";
-<<<<<<< HEAD
 
-=======
 const PanelStyled = styled(Collapse.Panel)`
   &&& {
     .ant-collapse-item {
@@ -25,15 +23,14 @@ const LinkStyled = styled(Typography.Link)`
     }
   }
 `;
->>>>>>> 56e38ad8eef4da122f3a30863d9d13562792b169
 const RootSiderbarLayout = () => {
   return (
     <div>
       <Collapse size="small" ghost defaultActiveKey={["1"]}>
         <PanelStyled header="Quản Lý Sản Phẩm" key="1">
-          <LinkStyled href="/testApi">Tất cả sản phẩm</LinkStyled>
+          <LinkStyled href="/trendyt/all">Tất cả sản phẩm</LinkStyled>
           <LinkStyled>Thêm sản phẩm</LinkStyled>
-          <LinkStyled>Sản phẩm vi phạm</LinkStyled>
+          <LinkStyled href="/trendyt/banned/action">Sản phẩm vi phạm</LinkStyled>
           <LinkStyled>Cài đặt sản phẩm</LinkStyled>
         </PanelStyled>
       </Collapse>

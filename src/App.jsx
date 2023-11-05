@@ -6,6 +6,11 @@ import AllProduct from "./component/ProductManagementLayout/AllProduct";
 import "./App.css";
 import ListAll from "./component/ProductManagementLayout/ProductListLayout/ListAll";
 import LayoutLogin from "./Layout/LayoutLogin";
+import Active from "./component/ProductManagementLayout/ProductListLayout/Active";
+import Banned from "./component/ProductManagementLayout/ProductListLayout/Banned";
+import Soldout from "./component/ProductManagementLayout/ProductListLayout/Soldout";
+import Reviewing from "./component/ProductManagementLayout/ProductListLayout/Reviewing";
+import Unlisted from "./component/ProductManagementLayout/ProductListLayout/Unlisted";
 
 const App = () => {
   return (
@@ -14,6 +19,11 @@ const App = () => {
         <Route path="/" element={<RootLayout />}>
           <Route path="/All" element={<AllProduct />} />
           <Route path="/AllProduct/List" element={<ListAll />} />
+          <Route path="/AllProduct/active" element={<Active />} />
+          <Route path="/AllProduct/soldout" element={<Soldout />} />
+          <Route path="/AllProduct/reviewing" element={<Reviewing />} />
+          <Route path="/AllProduct/unlisted" element={<Unlisted />} />
+          <Route path="/banned/action" element={<Banned />} />
         </Route>
 
         <Route path="/Login" element={<LayoutLogin />} />

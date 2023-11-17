@@ -40,8 +40,8 @@ const ButtonStyled = styled(Button)`
 `;
 const LayoutLogin = () => {
   const initalFormValue = {
-    email_User: "",
-    pass_User: "",
+    account: "",
+    password: "",
   };
   const [formValue, setFormValue] = useState(initalFormValue);
 
@@ -55,7 +55,7 @@ const LayoutLogin = () => {
   const onSubmit = async () => {
     try {
       await fetch(
-        "http://csmtung2003-001-site1.atempurl.com/api/LoginUser/v1/LoginUser",
+        "http://csmtung2003-001-site1.atempurl.com/api/login/v1/Login",
         {
           method: "POST",
           headers: {
@@ -65,22 +65,10 @@ const LayoutLogin = () => {
           credentials: "include",
         }
       )
-        .then((res) => {
-          if (res.ok) {
-            fetch(
-              "http://csmtung2003-001-site1.atempurl.com/api/LoginUser/v1/GetTestCookie",
-              {
-                method: "GET",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-              }
-            )
-              .then((res) => res)
-              .then((data) => console.log(data));
-          }
-        })
-        .then((data) => data);
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
     } catch (error) {
       console.log(error);
     }
@@ -104,7 +92,7 @@ const LayoutLogin = () => {
               placeholder="Enter your username or Email"
               prefix={<UserOutlined />}
               size="large"
-              name="email_User"
+              name="account"
               value={formValue.username}
               onChange={(e) => handleChangeFormValue(e)}
             />
@@ -112,7 +100,7 @@ const LayoutLogin = () => {
               placeholder="Enter your Password"
               prefix={<LockOutlined />}
               size="large"
-              name="pass_User"
+              name="password"
               value={formValue.password}
               onChange={(e) => handleChangeFormValue(e)}
             />

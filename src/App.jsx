@@ -2,9 +2,9 @@ import React from "react";
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RootLayout from "./Layout/RootLayout";
-import AllProduct from "./component/ProductManagementLayout/AllProduct";
+import AllProduct from "./component/AllProduct/AllProduct";
 import "./App.css";
-import ListAll from "./component/ProductManagementLayout/ProductListLayout/ListAll";
+import ListAll from "./component/ProductListLayout/ListAll";
 import LayoutLogin from "./Layout/LayoutLogin";
 import Active from "./component/ProductManagementLayout/ProductListLayout/Active";
 import Banned from "./component/ProductManagementLayout/ProductListLayout/Banned";
@@ -17,6 +17,7 @@ const App = () => {
     <BrowserRouter basename="/TrendyT">
       <Routes>
         <Route path="/" element={<RootLayout />}>
+<<<<<<< HEAD
           <Route path="/All" element={<AllProduct />} />
           <Route path="/AllProduct/List" element={<ListAll />} />
           <Route path="/AllProduct/active" element={<Active />} />
@@ -24,8 +25,12 @@ const App = () => {
           <Route path="/AllProduct/reviewing" element={<Reviewing />} />
           <Route path="/AllProduct/unlisted" element={<Unlisted />} />
           <Route path="/banned/action" element={<Banned />} />
+=======
+          <Route path="/AllProduct" element={<AllProduct />}>
+            <Route path="/AllProduct/List" element={<ListAll />} />
+          </Route>
+>>>>>>> 29871d75b23c79118868c2bd70b8e2744e888c21
         </Route>
-
         <Route path="/Login" element={<LayoutLogin />} />
       </Routes>
     </BrowserRouter>

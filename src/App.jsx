@@ -6,6 +6,7 @@ import AllProduct from "./component/AllProduct/AllProduct";
 import "./App.css";
 import ListAll from "./component/ProductListLayout/ListAll";
 import LayoutLogin from "./Layout/LayoutLogin";
+import AddProduct from "./pages/AddProduct";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/AllProduct" element={<AllProduct />}>
             <Route path="/AllProduct/List" element={<ListAll />} />
           </Route>
+          <Route path="/AddProduct" element={<AddProduct />} />
         </Route>
         <Route path="/Login" element={<LayoutLogin />} />
       </Routes>

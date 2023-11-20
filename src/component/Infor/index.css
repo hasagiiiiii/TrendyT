@@ -1,0 +1,55 @@
+.infor_basic {
+  margin: 15px 100px 0px 15px;
+  background-color: white;
+}
+.title-content {
+  padding: 30px;
+}
+.valueInfor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form_inp {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+.form_inp .title_inp {
+  width: 200px;
+}
+.input-Value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-Value label {
+  margin-bottom: 10px;
+}
+.input-Value button {
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: dotted;
+  margin-top: 10px;
+}
+.input-Value button btn-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.input-Value button p {
+  margin-bottom: 10px;
+  height: 10px;
+  width: 90%;
+  font-size: 12px;
+  color: #ee4d2d;
+}
+.input-Value button p span {
+  color: #ee4d2d;
+}

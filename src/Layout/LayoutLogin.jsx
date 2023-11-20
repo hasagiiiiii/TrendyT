@@ -4,6 +4,7 @@ import { Button, Form, Input } from "antd";
 import styled from "styled-components";
 import Logo from "../assest/logo2.png";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+// import { useNavigate } from "react-router-dom";
 const ContainerContent = styled.div`
   background: aqua;
   height: 80vh;
@@ -39,8 +40,8 @@ const ButtonStyled = styled(Button)`
 `;
 const LayoutLogin = () => {
   const initalFormValue = {
-    email_User: "",
-    pass_User: "",
+    account: "",
+    password: "",
   };
   const [formValue, setFormValue] = useState(initalFormValue);
 
@@ -50,11 +51,11 @@ const LayoutLogin = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  const onSubmit = async (e) => {
-    e.preventDefault();
+  // const navigate = useNavigate();
+  const onSubmit = async () => {
     try {
       await fetch(
-        "http://csmtung2003-001-site1.atempurl.com/api/LoginUser/v1/LoginUser",
+        "http://csmtung2003-001-site1.atempurl.com/api/login/v1/Login",
         {
           method: "POST",
           headers: {
@@ -63,31 +64,11 @@ const LayoutLogin = () => {
           body: JSON.stringify(formValue),
           credentials: "include",
         }
-      ).then((response) => {
-        if (response.headers.has("Set-Cookie")) {
-          // Lấy giá trị của header Set-Cookie
-          const cookieHeader = response.headers.has("Set-Cookie");
-
-          // Chia nhỏ các phần của cookie nếu có nhiều cookie
-          const cookieParts = cookieHeader.split(";");
-
-          // Lưu từng phần vào cookie storage
-
-          cookieParts.forEach((part) => {
-            // Tách tên và giá trị của cookie
-            console.log(part);
-            const [name, value] = part.trim().split("=");
-            console.log(cookieParts);
-            // Lưu cookie vào cookie storage
-            document.cookie = `${name}=${value};path="/Hello`;
-          });
-
-          // Hiển thị thông báo hoặc thực hiện các bước tiếp theo sau khi lưu cookie
-          console.log("Cookie đã được lưu thành công!");
-        } else {
-          console.log("Không có cookie được gửi từ backend.");
-        }
-      });
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
     } catch (error) {
       console.log(error);
     }
@@ -105,13 +86,13 @@ const LayoutLogin = () => {
               Nền tảng thương mại điện tử
             </h1>
           </div>
-          <FormStyled>
+          <FormStyled onFinish={onSubmit}>
             <h1>Đăng nhập</h1>
             <InputStyled
               placeholder="Enter your username or Email"
               prefix={<UserOutlined />}
               size="large"
-              name="email_User"
+              name="account"
               value={formValue.username}
               onChange={(e) => handleChangeFormValue(e)}
             />
@@ -119,14 +100,12 @@ const LayoutLogin = () => {
               placeholder="Enter your Password"
               prefix={<LockOutlined />}
               size="large"
-              name="pass_User"
+              name="password"
               value={formValue.password}
               onChange={(e) => handleChangeFormValue(e)}
             />
 
-            <ButtonStyled onClick={onSubmit} type="submit">
-              Đăng nhập
-            </ButtonStyled>
+            <ButtonStyled htmlType="submit">Đăng nhập</ButtonStyled>
           </FormStyled>
         </div>
       </ContainerContent>

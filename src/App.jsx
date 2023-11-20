@@ -6,6 +6,7 @@ import AllProduct from "./component/AllProduct/AllProduct";
 import "./App.css";
 import ListAll from "./component/ProductListLayout/ListAll";
 import LayoutLogin from "./Layout/LayoutLogin";
+import AddProduct from "./pages/AddProduct";
 import Active from "./component/ProductManagementLayout/ProductListLayout/Active";
 import Banned from "./component/ProductManagementLayout/ProductListLayout/Banned";
 import Soldout from "./component/ProductManagementLayout/ProductListLayout/Soldout";
@@ -17,7 +18,6 @@ const App = () => {
     <BrowserRouter basename="/TrendyT">
       <Routes>
         <Route path="/" element={<RootLayout />}>
-<<<<<<< HEAD
           <Route path="/All" element={<AllProduct />} />
           <Route path="/AllProduct/List" element={<ListAll />} />
           <Route path="/AllProduct/active" element={<Active />} />
@@ -25,11 +25,10 @@ const App = () => {
           <Route path="/AllProduct/reviewing" element={<Reviewing />} />
           <Route path="/AllProduct/unlisted" element={<Unlisted />} />
           <Route path="/banned/action" element={<Banned />} />
-=======
           <Route path="/AllProduct" element={<AllProduct />}>
             <Route path="/AllProduct/List" element={<ListAll />} />
           </Route>
->>>>>>> 29871d75b23c79118868c2bd70b8e2744e888c21
+          <Route path="/AddProduct" element={<AddProduct />} />
         </Route>
         <Route path="/Login" element={<LayoutLogin />} />
       </Routes>

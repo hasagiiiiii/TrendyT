@@ -3,6 +3,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+
 import HeaderReducer from "../../redux/HeaderReducer";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { LuClipboardList, LuShoppingBag } from "react-icons/lu";
@@ -91,7 +92,13 @@ const RootSiderbarLayout = () => {
             </h3>
           }
           key="3"
-        >
+        />
+        <PanelStyled header="Quản Lý Sản Phẩm" key="1">
+          <LinkStyled href="/trendyt/all">Tất cả sản phẩm</LinkStyled>
+          <LinkStyled>Thêm sản phẩm</LinkStyled>
+          <LinkStyled href="/trendyt/banned/action">
+            Sản phẩm vi phạm
+          </LinkStyled>
           <LinkStyled href="/TrendyT/AllProduct" onClick={getValueLink}>
             Tất cả sản phẩm
           </LinkStyled>

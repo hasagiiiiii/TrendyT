@@ -7,11 +7,11 @@ import "./App.css";
 import ListAll from "./component/ProductListLayout/ListAll";
 import LayoutLogin from "./Layout/LayoutLogin";
 import AddProduct from "./pages/AddProduct";
-import Active from "./component/ProductManagementLayout/ProductListLayout/Active";
-import Banned from "./component/ProductManagementLayout/ProductListLayout/Banned";
-import Soldout from "./component/ProductManagementLayout/ProductListLayout/Soldout";
-import Reviewing from "./component/ProductManagementLayout/ProductListLayout/Reviewing";
-import Unlisted from "./component/ProductManagementLayout/ProductListLayout/Unlisted";
+import Active from "./component/ProductListLayout/Active";
+import Banned from "./component/ProductListLayout/Banned";
+import Soldout from "./component/ProductListLayout/Soldout";
+import Reviewing from "./component/ProductListLayout/Reviewing";
+import Unlisted from "./component/ProductListLayout/Unlisted";
 
 const App = () => {
   return (

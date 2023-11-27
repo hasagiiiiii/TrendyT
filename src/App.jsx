@@ -18,15 +18,13 @@ const App = () => {
     <BrowserRouter basename="/TrendyT">
       <Routes>
         <Route path="/" element={<RootLayout />}>
-          <Route path="/All" element={<AllProduct />} />
-          <Route path="/AllProduct/List" element={<ListAll />} />
-          <Route path="/AllProduct/active" element={<Active />} />
-          <Route path="/AllProduct/soldout" element={<Soldout />} />
-          <Route path="/AllProduct/reviewing" element={<Reviewing />} />
-          <Route path="/AllProduct/unlisted" element={<Unlisted />} />
-          <Route path="/banned/action" element={<Banned />} />
           <Route path="/AllProduct" element={<AllProduct />}>
             <Route path="/AllProduct/List" element={<ListAll />} />
+            <Route path="/AllProduct/active" element={<Active />} />
+            <Route path="/AllProduct/soldout" element={<Soldout />} />
+            <Route path="/AllProduct/reviewing" element={<Reviewing />} />
+            <Route path="/AllProduct/unlisted" element={<Unlisted />} />
+            <Route path="/AllProduct/banned/action" element={<Banned />} />
           </Route>
           <Route path="/AddProduct" element={<AddProduct />} />
         </Route>

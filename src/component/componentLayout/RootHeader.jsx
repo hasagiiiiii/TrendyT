@@ -19,7 +19,7 @@ const RootHeader = () => {
   const location = useLocation();
   // console.log(window.location.pathname)
   const urlLocation = location.pathname.split("/");
-  console.log(urlLocation);
+  // console.log(urlLocation);
   return (
     <div className="header-content">
       <div className="header-logo">

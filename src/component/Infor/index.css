@@ -22,6 +22,12 @@
 .input-Value {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+.input-Value .showImg {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
 .input-Value label {
@@ -32,9 +38,12 @@
   height: 78px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-style: dotted;
-  margin-top: 10px;
+  border: dotted 0.5px gray;
+  transition: 0.4s all;
+}
+.input-Value button:hover {
+  background-color: #ee4d2d2c;
+  border: dotted 0.5px #ee4d2d;
 }
 .input-Value button btn-content {
   display: flex;
@@ -52,4 +61,53 @@
 }
 .input-Value button p span {
   color: #ee4d2d;
+}
+
+.input-Value .list-img {
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 10px;
+  cursor: all-scroll;
+}
+.input-Value .list-img .imgItem {
+  position: relative;
+}
+.input-Value .list-img .imgItem .titleImg {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 23px;
+  background-color: #979292d5;
+  width: 95%;
+  color: white;
+  text-align: center;
+  border-radius: 0px 0px 5px 5px;
+  font-size: 13px;
+  justify-content: center;
+}
+.input-Value .list-img .imgItem .titleImg span {
+  color: #ee4d2d;
+}
+.relative {
+  position: relative;
+}
+.imgItem:hover .img-action {
+  display: flex;
+}
+.img-action {
+  display: none;
+  justify-content: space-around;
+  cursor: pointer;
+  position: absolute;
+  background-color: #979292d5;
+  width: 95%;
+  bottom: 0;
+  border-radius: 0px 0px 5px 5px;
+}
+.img-action::before {
+  content: "";
+  width: 2px;
+  height: 15px;
+  background-color: rgb(51, 50, 50);
+  position: absolute;
 }

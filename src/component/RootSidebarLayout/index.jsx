@@ -75,6 +75,7 @@ const RootSiderbarLayout = () => {
               <LuShoppingBag size={20} /> Quản lý đơn hàng
             </h3>
           }
+          key="2"
         >
           <LinkStyled href="/TrendyT/AllProduct" onClick={getValueLink}>
             Quản Lý Vận Chuyển
@@ -84,19 +85,15 @@ const RootSiderbarLayout = () => {
           </LinkStyled>
           <LinkStyled>Cài Đặt Vận Chuyển</LinkStyled>
         </PanelStyled>
+
         <PanelStyled
           header={
             <h3>
               <LuClipboardList /> Quản Lý Sản Phẩm
             </h3>
           }
-        />
-        <PanelStyled header="Quản Lý Sản Phẩm" key="1">
-          <LinkStyled href="/trendyt/all">Tất cả sản phẩm</LinkStyled>
-          <LinkStyled>Thêm sản phẩm</LinkStyled>
-          <LinkStyled href="/trendyt/banned/action">
-            Sản phẩm vi phạm
-          </LinkStyled>
+          key="3"
+        >
           <LinkStyled href="/TrendyT/AllProduct" onClick={getValueLink}>
             Tất cả sản phẩm
           </LinkStyled>
